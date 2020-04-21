@@ -1,28 +1,25 @@
 {
-  "name": "nodejs-start",
+  "name": "demo-project-nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test application for todo list",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cooper-ua/nodejs-start.git"
+    "url": "git+https://github.com/cooper-ua/demo-project-nodejs.git"
   },
-  "author": "",
+  "author": "Nikolay Oleksandrenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cooper-ua/nodejs-start/issues"
+    "url": "https://github.com/cooper-ua/demo-project-nodejs/issues"
   },
-  "homepage": "https://github.com/cooper-ua/nodejs-start#readme",
+  "homepage": "https://github.com/cooper-ua/demo-project-nodejs#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^4.0.2",
-    "mongoose": "^5.9.7"
+    "express-handlebars": "^4.0.3",
+    "mongoose": "^5.9.10"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  }
+  "devDependencies": {}
 }

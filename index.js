@@ -3,6 +3,8 @@ const express = require ('express');
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 const appConfig = require('./config/config');
+const routes = require('./routes/routes');
+const path = require('path')
 
 //  create application
 const app = express();
@@ -10,7 +12,7 @@ const app = express();
 //  setup layout engine
 const hbs = exphbs.create({
     defaultLayout: 'main',
-    extname: 'hbs'
+    extname: 'hbs',
 });
 
 //  setup application
@@ -18,7 +20,10 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', 'views');
 
-app.use(blogRoutes);
+//  use block
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
+app.use(routes);
 
 async function start() {
     try {
@@ -29,7 +34,7 @@ async function start() {
             useUnifiedTopology: true
         });
 
-        app.listen(3000, () => {
+        app.listen(appConfig.port, () => {
             console.log("Server has been started successfully...");
         })
     } catch(e) {

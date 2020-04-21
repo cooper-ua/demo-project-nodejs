@@ -1,0 +1,33 @@
+/* custom styles */
+
+.nv-custom {
+    padding: 2px 5px;
+}
+
+.todo-element {
+    margin: 2px 0;
+}
+
+.todo-element label {
+    width: 100%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    color: #333;
+}
+
+.todo-element button {
+    display: inline-block;
+    float: right;
+}
+
+.todo-element form:first-of-type {
+    width:100%;
+}
+
+.todo-element span.finished {
+    text-decoration: line-through;
+    color: #aaa;
+}
