@@ -19,6 +19,8 @@ services:
     image: nginx
     container_name: nginx
     volumes:
-      - .default.conf:/etc/nginx/conf.d/default.conf
+      - ./default.conf:/etc/nginx/conf.d/default.conf
     links:
       - application
+    ports:
+      - 8989:8989

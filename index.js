@@ -3,7 +3,6 @@ const express = require ('express');
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 const appConfig = require('./config/config');
-const blogRoutes = require('./routes/blog');
 
 //  create application
 const app = express();
